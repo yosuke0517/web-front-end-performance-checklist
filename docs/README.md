@@ -5,10 +5,10 @@
 # 1. 測定する
 - ツールでの測定
   - [PageSpeed Insights](https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect&hl=ja)
-    - [ ] スコアを測定する（100 点に近ければ近いほど良いがリソースと
+    - [ ] スコアを測定しボトルネックを特定する
     - [ ] 実施した際の費用（リソース等）と効果のバランスを検討する
   - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=ja)
-    - [ ] スコアを測定する（100 点に近ければ近いほど良いがリソースと
+    - [ ] スコアを測定しボトルネックを特定する
     - [ ] 実施した際の費用（リソース等）と効果のバランスを検討する
   - [newrelic（継続的監視）](https://newrelic.com/lp/browser-monitoring)
     - [ ] パフォーマンスを測定しボトルネックを特定する
