@@ -116,3 +116,7 @@
   - [ ] [prefetch: リソースの事前読み込み](https://www.notion.so/link-e1e93db5b0424c6996f08ec857280dc4#5762bdae7c594eb2a71440f3c7d12f1f) をしているか
   - [ ] [prerender: ウェブページのプリレンダリング](https://www.notion.so/link-e1e93db5b0424c6996f08ec857280dc4#2fff691772764cc5840a00f3af90e3ee) をしているか
   - [ ] [preconnect: 接続の投機的開始](https://www.notion.so/link-e1e93db5b0424c6996f08ec857280dc4#78b23105ae1e4da1979f3136bf243671) をしているか
+- [ ] gzip 圧縮を有効にしているか
+  - [参考資料](https://fuzzy-hunter-3bf.notion.site/Gzip-f3e756ce9c9e47dbb47ac9e481143c3c)
+- [ ] CDN を用いてリソースを配信しているか
+  - [参考資料](https://fuzzy-hunter-3bf.notion.site/CDN-4128038c53814bc4a54928bd1066f0b8)
