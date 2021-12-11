@@ -49,4 +49,27 @@
   - JavaScript
     - [uglify-js](https://www.npmjs.com/package/uglify-js)
 - [ ] 写真
-- 参考資料： [非可逆圧縮と可逆圧縮](https://fuzzy-hunter-3bf.notion.site/64cf91c582224f54b36f6d164d90aacb)
+- [ ] 適切な画像形式を選択しているか
+  - JPEG：写真や色のグラデーションが複雑なもの
+  - PNG：PC で作成したデータや透明を使うもの
+  - GIF：色が単純なアニメーション
+  - SVG：ベクター形式で作成されたロゴ
+  - BMP：写真向きだがファイルサイズ大きすぎて使えない
+  - WebP：ブラウザ対応できれば JPG,PNG,GIF の代わりに
+  - 参考資料： [非可逆圧縮と可逆圧縮](https://fuzzy-hunter-3bf.notion.site/64cf91c582224f54b36f6d164d90aacb)
+- [ ] 画像ファイルを最適化しているか
+  - ※参考ツール（これらは[imagemin](https://github.com/imagemin/imagemin) などのラッパーツールから使ったり、タスクランナーやビルドツールから使う
+  - JPEG
+    - [jpegtran](http://jpegclub.org/jpegtran/)
+    - [mozjpeg](https://github.com/mozilla/mozjpeg)
+  - PNG
+    - [ZopfliPNG](https://github.com/google/zopfli)
+    - [pngquant](https://pngquant.org/)
+    - [Pngcrush](https://pmt.sourceforge.io/pngcrush/)
+  - GIF
+    - [GIFsicl](https://www.lcdf.org/gifsicle/)
+- [ ] CSS の import を避けているか（import するファイルを直列で取得していくため好ましくない）
+  - webpack 等を使い 1 つの CSS へ統合する or Sass 等の CSS メタ言語を使用する
+- [ ] JavaScript の同期的な読み込みを避けられているか
+  - JavaScript 読み込みはドキュメントのパース・CSS ファイルの読み込みをブロックする = そのウェブページのレンダリングもブロックする
+  - [defer属性 or async属性](https://fuzzy-hunter-3bf.notion.site/defer-async-3337fec0601840feb78619d837ff3a1e) を使うことが望ましい
