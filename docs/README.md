@@ -39,7 +39,7 @@
 - ブラウザのキャッシュを利用する
 ---
 
-- [ ] HTML/CSS/JavaScriptを最小化しているか（webpack使用時はmode: productionを使用しているか）
+- [ ] HTML/CSS/JavaScript を最小化しているか（webpack 使用時は mode: production を使用しているか）
   - ※参考ツール
   - HTML
     - [html-minifier](https://www.npmjs.com/package/html-minifier)
@@ -49,4 +49,4 @@
   - JavaScript
     - [uglify-js](https://www.npmjs.com/package/uglify-js)
 - [ ] 写真
-- 参考資料: [非可逆圧縮と可逆圧縮](https://fuzzy-hunter-3bf.notion.site/64cf91c582224f54b36f6d164d90aacb)
+- 参考資料： [非可逆圧縮と可逆圧縮](https://fuzzy-hunter-3bf.notion.site/64cf91c582224f54b36f6d164d90aacb)
