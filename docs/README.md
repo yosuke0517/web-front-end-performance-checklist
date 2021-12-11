@@ -111,6 +111,8 @@
   
 - [ ] CSS スプライトを使って複数の画像をまとめる（小さな画像ファイルを大量に利用する場合など）
   - 例…[google](https://ssl.gstatic.com/gb/images/p2_772b9c3b.png)のトップページで使用されている（画像の Y 軸を指定してアイコンを出し分けている）
-- [ ] リソースを事前読み込みしているか
-  - [ ] DNS プリフェッチしているか
-  - 
+- [ ] link 要素を使ったリソースを事前読み込みしているか
+  - [ ] [DNS プリフェッチ](https://www.notion.so/link-e1e93db5b0424c6996f08ec857280dc4#2cf04459131441c38b7d9c8dee3c643a) しているか
+  - [ ] [prefetch: リソースの事前読み込み](https://www.notion.so/link-e1e93db5b0424c6996f08ec857280dc4#5762bdae7c594eb2a71440f3c7d12f1f) をしているか
+  - [ ] [prerender: ウェブページのプリレンダリング](https://www.notion.so/link-e1e93db5b0424c6996f08ec857280dc4#2fff691772764cc5840a00f3af90e3ee) をしているか
+  - [ ] [preconnect: 接続の投機的開始](https://www.notion.so/link-e1e93db5b0424c6996f08ec857280dc4#78b23105ae1e4da1979f3136bf243671) をしているか
