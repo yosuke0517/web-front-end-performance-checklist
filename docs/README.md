@@ -4,6 +4,7 @@
 
 ### パフォーマンス改善に取り組む前に読んで欲しいもの
 - [ブラウザの仕組みとwebページが表示されるまでのフロー](https://fuzzy-hunter-3bf.notion.site/Web-c945271a34b54e4c8a6b5c3b0d7ffd30)
+- 以下に記載しているチェックリストをすべて網羅すれば良いわけではないと考えます。プロジェクトメンバーのリソースやパフォーマンスのゴール、費用対効果を考慮して最適な対策を施してください
 
 # 1. 測定する
 - ツールでの測定
@@ -73,3 +74,43 @@
 - [ ] JavaScript の同期的な読み込みを避けられているか
   - JavaScript 読み込みはドキュメントのパース・CSS ファイルの読み込みをブロックする = そのウェブページのレンダリングもブロックする
   - [defer属性 or async属性](https://fuzzy-hunter-3bf.notion.site/defer-async-3337fec0601840feb78619d837ff3a1e) を使うことが望ましい
+- [ ] デバイスピクセル比ごとに読み込む画像を切り替えているか
+  - 例…secret 属性を使いデバイスピクセルが 1 と 2 で画像をだし分ける
+  ```html
+  <img src="example.png" width="200" height="200"
+    srcset="example.png 1x, example@2x.png 2x">
+  ```
+  - ※HTML5.1 においてはメディアクエリで指定せずとも HTML で完結する[レスポンシブイメージ](https://ics.media/entry/13324/) を使うと良い
+- [ ] CSS のメディアクエリを適切に使用する
+  - 例…印刷時のみ適用したい CSS をメディアクエリで指定する
+  ```scss
+  /* 印刷時のみ適用されるCSS */
+  @media print { 
+   body {
+     background-color: white;
+     color: black;
+    }
+  }
+  
+  /* ビューポートが40em以下の場合のみ適用されるCSS */
+  @media (min-width: 40em) { 
+  /* … */
+   }
+  ```
+  - 例…link 要素に書くとき（こっちができるならメディアクエリよりこっちの方が効果的）
+  ```html
+  <!スクリーン表示時のみ適用されるCSS>
+  <link href="style.css" rel="stylesheet" media="screen">
+  
+  <!印刷時のみ適用されるCSS>
+  <link href="print.css" rel="stylesheet" media="print">
+  
+  <!ビューポートの横幅が920px以上の場合に適用されるCSS>
+  <link href="other.css" rel="stylesheet" media="(minwidth:920px)">
+  ```
+  
+- [ ] CSS スプライトを使って複数の画像をまとめる（小さな画像ファイルを大量に利用する場合など）
+  - 例…[google](https://ssl.gstatic.com/gb/images/p2_772b9c3b.png)のトップページで使用されている（画像の Y 軸を指定してアイコンを出し分けている）
+- [ ] リソースを事前読み込みしているか
+  - [ ] DNS プリフェッチしているか
+  - 
