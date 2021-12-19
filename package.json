@@ -7,9 +7,9 @@
   "author": "yosuke0517",
   "license": "MIT",
   "scripts": {
-    "lint": "textlint docs/README.md",
-    "lintfix": "textlint --fix docs/README.md",
-    "build:pdf": "md-to-pdf docs/README.md --config-file ./pdf-configs/config.js"
+    "lint": "textlint docs/index.md",
+    "lintfix": "textlint --fix docs/index.md",
+    "build:pdf": "md-to-pdf docs/index.md --config-file ./pdf-configs/config.js"
   },
   "devDependencies": {
     "husky": "^5.0.0-alpha.6",
